@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" href="./form.css">
+    </head>
+    
+    <body>
+        
+        <div class="form-container" >
+            <form id="form-validation">
+                
+                <div class="input-container">
+                    <input type="text" id="first-name" placeholder="Ingrese su nombre" required>
+                    <span id="first-name-span" class="error"></span>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="last-name" placeholder="Ingrese su apellido" required>
+                    <span id="last-name-span" class="error"></span>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Ingrese su usuario" required>
+                    <span id="username-span" class="error"></span>
+                </div>
+                <div class="input-container">
+                <input type="text" id="password" placeholder="Ingrese su contraseña" required>
+                <span id="password-span" class="error"></span>
+            </div>
+            <div class="input-container">
+                <input type="text" id="confirm-password" placeholder="Confirme su contraseña" required>
+                <span id="confirm-password-span" class="error"></span>
+            </div>
+            <div class="input-container">
+                <p>Ingrese su fecha de nacimiento</p>
+                <input type="date" id="birthday" required>
+                <span id="birthday-span" class="error"></span>
+            </div>
+            <div class="check-container">
+                <label>
+                    <input type="checkbox" name="check" id="check"> Quiero recibir noticias
+                </label>
+            </div>
+            
+            <button type="submit" id="send-btn">Send</button>
+            
+            
+        </form>
+        
+    </div>
+    
+    <script src="./form.js"></script>
+</body>
+</html>

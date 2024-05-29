@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vp;
+}
+
+#open-modal-btn {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 6px 8px;
+    font-size: 10px;
+    color: #211f1e;
+    background-color: #ff0088;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #cc00ff66;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-btn {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 6px 8px;
+    font-size: 13px;
+    color: #211f1e;
+}
+  
+#confirm-btn{
+    background-color: #09ff00;
+}
+
+#cancel-btn{
+    background-color: #ff0033;
+}
+
+
+  /* Estilos para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

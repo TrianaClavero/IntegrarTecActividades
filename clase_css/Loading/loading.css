@@ -1,0 +1,60 @@
+body{
+    background: #fafafa;
+    display: flex;
+    height: 100vp;
+    overflow: hidden;
+
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    margin-top: 25%;
+    flex-direction: column;
+    max-width: max-content;
+}
+
+.loading-div{
+    display: flex;
+    margin: auto;
+    height: 80px;
+
+}
+
+
+
+.cat{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px, 25px;
+    scale: 0.1;
+    animation: jump 1s linear infinite;
+}
+
+.caption{
+    margin: auto;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+@keyframes jump {
+    0%{
+        margin-top: 0;
+    }
+    35%{
+        margin-top: -75px;
+    }
+    70%{
+        margin-top: 0;
+    }
+}
+
+#b{
+    animation-delay: 0.2s;
+}
+
+#c{
+    animation-delay: 0.4s;
+}

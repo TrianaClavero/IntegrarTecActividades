@@ -1,0 +1,45 @@
+body{
+    background: linear-gradient(to left, crimson, goldenrod);
+  }
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 35px;
+
+}
+
+h1::before{
+    content:"🔎";
+}
+
+
+form{
+    font-weight: bold;
+    width:  50%; 
+    margin: 0 auto ;
+    font-size: 20px;
+}
+
+input{
+    
+    width: 300px;
+    height: 35px;
+}
+
+button{
+    background-color: yellow;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 35px;
+    width: 75px;
+    
+    
+}
