@@ -1,7 +1,8 @@
 {
   "name": "clase_node",
   "version": "1.0.0",
-  "description": "" ,
+  "description": "",
+  "type": "module",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
@@ -12,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
   }
 }
