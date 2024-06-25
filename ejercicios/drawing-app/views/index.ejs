@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Drawing App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <canvas id="drawingCanvas"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const canvas = document.getElementById('drawingCanvas');
+        const context = canvas.getContext('2d');
+        const socket = io();
+
+        let drawing = false;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        canvas.addEventListener('mousedown', () => {
+            drawing = true;
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            drawing = false;
+            context.beginPath();
+        });
+
+        canvas.addEventListener('mousemove', (event) => {
+            if (!drawing) return;
+
+            const x = event.clientX;
+            const y = event.clientY;
+
+            context.lineWidth = 5;
+            context.lineCap = 'round';
+            context.strokeStyle = '#000000';
+
+            context.lineTo(x, y);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(x, y);
+
+            socket.emit('drawing', { x, y });
+        });
+
+        socket.on('drawing', (data) => {
+            context.lineWidth = 5;
+            context.lineCap = 'round';
+            context.strokeStyle = '#000000';
+
+            context.lineTo(data.x, data.y);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(data.x, data.y);
+        });
+    </script>
+</body>
+</html>
